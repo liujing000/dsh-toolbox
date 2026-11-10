@@ -1,0 +1,52 @@
+{
+  "name": "@dsh-toolbox/product-research-workbench",
+  "version": "0.2.1",
+  "description": "Local-first URL/text product research, human evidence, lifecycle management, scoring, backup, and Markdown/HTML reports for DeepSeek Harness.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "npm test && npm pack --dry-run"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "0.1.1-rc.2",
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.1.1-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiWhaleW/dsh-toolbox.git",
+    "directory": "packages/product-research-workbench"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh-plugin",
+    "product-research",
+    "local-first",
+    "sqlite"
+  ]
+}
